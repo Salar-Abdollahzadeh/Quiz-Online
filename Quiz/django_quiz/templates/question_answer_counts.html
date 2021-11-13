@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <ul>
+            <li>
+                {{ qs.title }}
+            </li>
+            <li>
+                correct_answer_count : {{ qs.correct_answer_count_property }}
+            </li>
+            <li>
+                wrong_answer_count : {{ qs.wrong_answer_count_property }}
+            </li>
+            <li>
+                not_answred_count: {{ qs.not_answered_count_property }}
+            </li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>
+        نمایش تمامی سوالات
+    </title>
+{% endblock %}
+
+
+{% block content %}
+   <div>
+        <ul>
+        {% for question in qs %}
+
+            <li>
+                 {{ question.cat.name }} | {{ question.title }}
+            </li>
+            {% for choice in question.choice_set.all %}
+                <li>
+                    {{ choice.number }} - {{ choice.title }}
+                </li>
+            {% endfor %}
+
+        {% endfor %}
+        </ul>
+   </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>
+        نمایش یک سوال
+    </title>
+{% endblock %}
+
+
+{% block content %}
+    <div>
+        <ul>
+            <li>
+                {{ qs.title }}
+            </li>
+                {% for choice in qs.choice_set.all %}
+                    <li>
+                        {{ choice.number }} - {{ choice.title }}
+                    </li>
+                {% endfor %}
+
+        </ul>
+    </div>
+{% endblock %}
