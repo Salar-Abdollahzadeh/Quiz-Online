@@ -1,2 +1,2 @@
 # Quiz-Online
-API
+API & DjangoRest & OOP
